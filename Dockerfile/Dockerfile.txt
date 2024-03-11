@@ -1,0 +1,14 @@
+# Utilizați o imagine Python de bază
+FROM python:3.8-slim
+
+# Setăm directorul de lucru în interiorul containerului
+WORKDIR /app
+
+# Copiem fișierul app.py în container
+COPY app.py .
+
+# Instalăm dependențele Python definite în requirements.txt (dacă există)
+# RUN pip install -r requirements.txt
+
+# Comanda de rulare a aplicației
+CMD ["python", "app.py"]
